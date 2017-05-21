@@ -1,0 +1,10 @@
+
+SciKit-Learn 教程
+
+1.why
+2.安装
+3.选择学习方法
+4.通用学习模式
+5.sklearn强大数据库
+6.sklearn model的属性与功能
+7.normalization 标准化
