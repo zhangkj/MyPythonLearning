@@ -1,0 +1,89 @@
+http://www.tuicool.com/articles/3y2MBj
+
+iScript 是Github上 PeterDing 大神写的一个脚本集，由多数的 python 脚本和少数GM脚本组成。
+
+含有以下几个脚本：
+
+xiami.py - 下载或播放高品质虾米音乐(xiami.com)
+pan.baidu.com.py - 百度网盘的下载、离线下载、上传、播放、转存、文件操作
+bt.py - magnet torrent 互转、及 过滤敏.感.词
+115.py - 115网盘的下载和播放
+yunpan.360.cn.py - 360网盘的下载
+music.baidu.com.py - 下载或播放高品质百度音乐(music.baidu.com)
+music.163.com.py - 下载或播放高品质网易音乐(music.163.com)
+flvxz_cl.py - flvxz.com 视频解析 client - 支持下载、播放
+tumblr.py - 下载某个tumblr.com的所有图片
+unzip.py - 解决linux下unzip乱码的问题
+ed2k_search.py - 基于 donkey4u.com 的emule搜索
+91porn.py - 下载或播放91porn 高能预警：未满18周岁请自行退避
+ThunderLixianExporter.user.js - A fork of https://github.com/binux/ThunderLixianExporter - 增加了mpv和mplayer的导出。
+个人最常用的是其中的 pan.baidu.com.py ，因此本文就简单介绍下它，其它脚本的用法请去 项目主页 查看
+
+在使用该脚本之前你需要安装python和依赖，不过一般Linux都会自带的（虽然也许自带的版本会比较低，就像centos
+
+这里我就默认你已经有了easy_install和pip吧(
+
+使劲偷懒ing...
+安装依赖
+
+pip install requests requests_toolbelt
+使用方法
+
+chmod a+x pan.baidu.com.py
+./pan.baidu.com.py    #会显示帮助
+#或者掠过上面的步骤，使用python pan.baidu.com.py
+下文将pan.baidu.com.py简称为bd.py(文件名太长....
+
+账号管理
+
+登录帐号有4种用法....
+
+./bd.py g
+./bd.py login
+./bd.py login username
+./bd.py login username password
+多帐号登录一直用 bp login 即可
+
+切换帐号：
+
+./bd.py uc
+删除帐号：
+
+./bd.py ud
+下载方式
+
+bd.py默认调用wget进行下载，但是也可以通过 -a 10来调用aria2，其中10为分段数
+
+下载自己网盘中的单个或多个文件
+
+./bd.py d http://pan.baidu.com/disk/home#dir/path=/path/to/filename1 http://pan.baidu.com/disk/home#dir/path=/path/to/filename2 ..
+  or
+./bd.py d /path/to/filename1 /path/to/filename2 ..
+递归下载自己网盘中的单个或多个文件夹
+
+./bd.py d -R http://pan.baidu.com/disk/home#dir/path=/path/to/directory1 http://pan.baidu.com/disk/home#dir/path=/path/to/directory2 ..
+  or
+./bd.py d -R /path/to/directory1 /path/to/directory2 ..
+递归下载后缀为 .mp3 的文件
+
+./bd.py d -R /path/to/directory1 /path/to/directory2 .. -T .mp3
+非递归下载
+
+./bd.py d /path/to/directory1 /path/to/directory2 ..
+下载单个公开分享的文件
+
+./bd.py d 'url'
+例如： ./bd.py d 'http://pan.baidu.com/s/1pJ0NtIN'
+下载单个私密分享的文件
+
+./bd.py d 'url' -s password
+例如： ./bd.py d 'http://pan.baidu.com/s/1c0Eh1bM' -s h81a
+转存文件
+
+./bd.py s 'url' remote_path
+./bd.py s 'url' remote_path -s password
+实际使用截图
+
+SpeedTest测速截图
+单个私密分享文件下载
+单个私密文件转存下载自己网盘里文件
