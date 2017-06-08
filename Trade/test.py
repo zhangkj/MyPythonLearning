@@ -2,7 +2,13 @@
 
 import tushare as ts
 
-df = ts.get_realtime_quotes(['002774','002352','601766'])
+df = ts.get_realtime_quotes(['002873',  '000728','002040'])#600340
 
-print(df[['price','pre_close']])
+# def computer(x):
 
+
+# for data in df
+# 	print((data['price']-data['open'])/data['open'])
+
+
+print(df[['price', 'pre_close']])
