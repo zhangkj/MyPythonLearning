@@ -8,3 +8,4 @@ SciKit-Learn 教程
 5.sklearn强大数据库
 6.sklearn model的属性与功能
 7.normalization 标准化
+8.交叉验证 Cross-validation
