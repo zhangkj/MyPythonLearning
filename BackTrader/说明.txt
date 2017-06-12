@@ -1,0 +1,4 @@
+
+backtrader量化平台教程:http://blog.csdn.net/qtlyx/article/details/61927006
+
+backtrader是一个量化策略的回测分析平台，功能还是很强大的。

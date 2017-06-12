@@ -25,4 +25,8 @@ Python日报http://py.memect.com/
 
 Python 金融
 
+
+
+BackTrader
+
 量化策略回测平台Backtrader的入门教程http://blog.csdn.net/column/details/15582.html
