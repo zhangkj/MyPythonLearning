@@ -20,3 +20,9 @@ Python教程文档
 【量化小讲堂 - Python、Pandas系列】往期目录汇总帖 http://bbs.pinggu.org/thread-3950124-1-1.html
 
 Python日报http://py.memect.com/
+
+
+
+Python 金融
+
+量化策略回测平台Backtrader的入门教程http://blog.csdn.net/column/details/15582.html
