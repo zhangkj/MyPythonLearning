@@ -26,23 +26,23 @@ X_test_std = sc.transform(X_test)
 
 
 
-#3. 用sklearn的感知机模型训练数据
-from sklearn.linear_model import Perceptron
+# #3. 用sklearn的感知机模型训练数据
+# from sklearn.linear_model import Perceptron
 
-#迭代次数1000次，学习率0.3
-ppn = Perceptron(n_iter = 1000, eta0 = 0.3, random_state = 0)
-ppn.fit(X_train_std,y_train)
-y_pred = ppn.predict(X_test_std)
-print 'Misclassified samples:%d' % (y_test != y_pred).sum()
-print 'Accuracy:%.2f'% accuracy_score(y_test,y_pred)
-
-print X_test,y_pred
-
-# #1. 用逻辑回归模型预测涨跌
-# from sklearn.linear_model import LogisticRegression
-
-# lr = LogisticRegression(C=1000.0, random_state=0)
-# lr.fit(X_train_std, y_train)
-# y_pred = lr.predict(X_test_std)
+# #迭代次数1000次，学习率0.3
+# ppn = Perceptron(n_iter = 1000, eta0 = 0.3, random_state = 0)
+# ppn.fit(X_train_std,y_train)
+# y_pred = ppn.predict(X_test_std)
 # print 'Misclassified samples:%d' % (y_test != y_pred).sum()
-# print 'Accuracy:%.2f' % accuracy_score(y_test, y_pred)
+# print 'Accuracy:%.2f'% accuracy_score(y_test,y_pred)
+
+# print X_test,y_pred
+
+#1. 用逻辑回归模型预测涨跌
+from sklearn.linear_model import LogisticRegression
+
+lr = LogisticRegression(C=1000.0, random_state=0)
+lr.fit(X_train_std, y_train)
+y_pred = lr.predict(X_test_std)
+print 'Misclassified samples:%d' % (y_test != y_pred).sum()
+print 'Accuracy:%.2f' % accuracy_score(y_test, y_pred)
