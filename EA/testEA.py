@@ -9,7 +9,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 # 获取经过mt4处理的数据集
-data = pd.read_csv('XAUUSDtick.csv')
+#data = pd.read_csv('XAUUSDtick.csv')
+data = pd.read_csv('eu_ExecData.csv')
 
 # 数据x,y分类
 X = data.iloc[:, [0, 1]].values
